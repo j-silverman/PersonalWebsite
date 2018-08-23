@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    <title> Jonathan Silverman </title>
+</header>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+    h1{
+        font-size: 50px;
+    }
+
+    h2{
+        font-size: 40px;
+        text-align: center;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a.active{
+        background-color: #A9A9A9;
+    }
+
+    li a, .dropbtn {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover, .dropdown:hover .dropbtn {
+        background-color: #dddddd;
+    }
+
+    li.dropdown {
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .fullpage{
+        width: 75%;
+        height: 100%;
+        margin: auto;
+        top: 50px;
+        position: relative;
+    }
+
+    .textbox {
+        position: absolute;
+        display: block;
+        right: 0;
+        top: 0;
+        width: 50%;
+        text-align: left;
+        font-size: 30px;
+
+    }
+    .image{
+        position: absolute;
+        display: block;
+        top: 100px;
+        width: 40%;
+        text-align: center;
+    }
+    .image img {
+        border-radius: 50%;
+        width: 50%;
+    }
+    .fa, .material-icons {
+    padding: 3%;
+    font-size: 150%;
+    width: 6%;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    }
+
+
+</style>
+
+<ul>
+  <li><a class="active" href="{{ url_for('index') }}">Home</a></li>
+  <li><a href="{{ url_for('resume') }}">Resume</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Projects</a>
+    <div class="dropdown-content">
+      <a href="https://github.com/j-silverman/DataMechanicsSpringProject">Exploring Environmental Friendliness and Crime Rates of Neighborhoods in Boston</a>
+      <a href="https://github.com/milesmahon/cs411">Sync</a>
+      <a href="https://github.com/j-silverman/460PA1">Winstagram</a>
+      <a href="https://github.com/j-silverman/SocialDisaster">Social Disaster</a>
+    </div>
+  </li>
+</ul>
+<h1> Jonathan Silverman</h1>
+<br>
+<h2> About Me</h2>
+<div class="fullpage">
+    <div class = "image">
+        <img src="/static/linkedin_photo.jpg">
+        <br>
+        <a href="mailto:jhs2018@bu.edu" class="material-icons">email</a>
+        <a href="https://www.linkedin.com/in/jonathan-silverman-/" class="fa fa-linkedin"></a>
+        <a href="https://www.instagram.com/j_silverman_/" class="fa fa-instagram"></a>
+        <a href="https://github.com/j-silverman" class="fa fa-github"></a>
+        <br>
+        Email: jhs2018@bu.edu
+        <br>
+        Phone: (973)580-9875
+    </div>
+    <div class="textbox">
+        I am a recent graduate of Boston University with a B.A. in Computer Science and a minor in Biology. My academic experience was comprised of a focus in Data Science and Data Engineering. During my time at BU I worked with a variety of real world datasets, from natural language data to spatiotemporal databases. I also became familiar with a multitude of tools and techniques to analyse and index these datasets, including Dimensionality Reduction, Unsupervised Learning, NLP, and Regressions. <br> <br>
+
+The data science curriculum at Boston University nurtured my curiosity for learning new technologies, and also increased my ability to understand the benefits and shortcomings of each attribute in a dataset. This curiosity has allowed me to clearly and creatively explain and produce solutions to a variety of unclear problems. <br><br>
+
+Prior to deciding to pursue Data Science, I gained experience in Software Development through a variety of personal projects as well as with an internship as a QA analyst at Conduent, a government and business technology company. While at Conduent I assisted in the development of the New Jersey EZ-Pass IVR and website. I frequently participated in meetings with the development team, where I was tasked with clearly communicating problems and potential solutions to both developers and managers.<br><br>
+
+If you would like to know more about me or my projects, I encourage you to review my <a href="{{ url_for('resume') }}">resume</a> or contact me via email.
+<br><br>
+    </div>
+
+
+</div>
+
+
+</html>
